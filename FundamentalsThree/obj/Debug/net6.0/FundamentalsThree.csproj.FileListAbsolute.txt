@@ -1,0 +1,15 @@
+D:\Coding Dojo\FundamentalsThree\bin\Debug\net6.0\FundamentalsThree.exe
+D:\Coding Dojo\FundamentalsThree\bin\Debug\net6.0\FundamentalsThree.deps.json
+D:\Coding Dojo\FundamentalsThree\bin\Debug\net6.0\FundamentalsThree.runtimeconfig.json
+D:\Coding Dojo\FundamentalsThree\bin\Debug\net6.0\FundamentalsThree.dll
+D:\Coding Dojo\FundamentalsThree\bin\Debug\net6.0\FundamentalsThree.pdb
+D:\Coding Dojo\FundamentalsThree\obj\Debug\net6.0\FundamentalsThree.csproj.AssemblyReference.cache
+D:\Coding Dojo\FundamentalsThree\obj\Debug\net6.0\FundamentalsThree.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding Dojo\FundamentalsThree\obj\Debug\net6.0\FundamentalsThree.AssemblyInfoInputs.cache
+D:\Coding Dojo\FundamentalsThree\obj\Debug\net6.0\FundamentalsThree.AssemblyInfo.cs
+D:\Coding Dojo\FundamentalsThree\obj\Debug\net6.0\FundamentalsThree.csproj.CoreCompileInputs.cache
+D:\Coding Dojo\FundamentalsThree\obj\Debug\net6.0\FundamentalsThree.dll
+D:\Coding Dojo\FundamentalsThree\obj\Debug\net6.0\refint\FundamentalsThree.dll
+D:\Coding Dojo\FundamentalsThree\obj\Debug\net6.0\FundamentalsThree.pdb
+D:\Coding Dojo\FundamentalsThree\obj\Debug\net6.0\FundamentalsThree.genruntimeconfig.cache
+D:\Coding Dojo\FundamentalsThree\obj\Debug\net6.0\ref\FundamentalsThree.dll

@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Survey
+
+<form asp-controller="Home" asp-action="Submit" method="post">
+        <div>
+            <div class="mb-3">
+                <label asp-for="Name">Full Name:</label>
+                <input class="form-control" asp-for="Name" id="Name" />
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Location">Location:</label>
+                <select class="form-control" asp-for="Location" id="Location">
+                    <option value="">Select a Location</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="New York">New York</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Seattle">Seattle</option>
+                </select>
+                <span asp-validation-for="Location"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Language">Favorite Language:</label>
+                <select class="form-control" asp-for="Language" id="Language">
+                    <option value="">Select a Language</option>
+                    <option value="Python">Python</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Java">Java</option>
+                    <option value="C#">C#</option>
+                </select>
+                <span asp-validation-for="Language"></span>
+            </div class="mb-3">
+            <div>
+                <label asp-for="Comment">Comment (optional):</label><br>
+                <textarea class="form-control" asp-for="Comment" id="Comment"  cols="30" rows="5"></textarea>
+                <span asp-validation-for="Comment"></span>
+            </div>
+            <div>
+                <button class="btn btn-success" type="submit">Submit</button>
+            </div>
+        </div>
+    </form>

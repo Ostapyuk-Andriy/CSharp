@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "One Product Page";
+}
+@model MyViewModel
+
+<div class="text-center">
+    <h1><a href="/">Products</a> | <a href="/Category">Categories</a></h1>
+    <h2>@Model.Product.Name</h2>
+</div>
+<div class="d-flex justify-content-between">
+    <div>
+        <h1>Categories</h1>
+        <ul>
+            @foreach (Association c in Model.Product.Associations)
+            {
+                
+                <li>@c.Category.Name</li>
+                
+            }
+        </ul>
+    </div>
+    <div>
+        @await Html.PartialAsync("~/Views/Home/_AddCategory.cshtml", Model.Association)
+    </div>
+</div>

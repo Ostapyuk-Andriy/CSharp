@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@* @model Pet
+
+<h1>My Pet</h1>
+<p>Name</p>
+<p>@Model.Name</p>
+<p>Age</p>
+<p>@Model.Age</p>
+<p>Type</p>
+<p>@Model.Type</p>
+<p>Hair Color</p>
+<p>@Model.HairColor</p> *@
+
+<h1>My Pet</h1>
+<p>Name</p>
+<p>@Context.Session.GetString("petName")</p>
+<p>Age</p>
+<p>@Context.Session.GetInt32("petAge")</p>
+<p>Type</p>
+<p>@Context.Session.GetString("petType")</p>
+<p>Hair Color</p>
+<p>@Context.Session.GetString("petHairColor")</p>
+<a class="btn btn-secondary" href="/ClearSession">Start Over</a>

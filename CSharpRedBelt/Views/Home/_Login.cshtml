@@ -1,0 +1,19 @@
+@model UserLogin
+
+<div>
+    <form asp-action="UserLogin" asp-controller="User" method="post">
+        <div class="mb-3">
+            <label asp-for="EmailLogin"></label>
+            <input asp-for="EmailLogin" class="form-control">
+            <span asp-validation-for="EmailLogin" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="PasswordLogin"></label>
+            <input asp-for="PasswordLogin" value="12345678" class="form-control">
+            <span asp-validation-for="PasswordLogin" class="text-danger"></span>
+        </div>
+        <div>
+            <button class="btn btn-success">Login</button>
+        </div>
+    </form>
+</div>

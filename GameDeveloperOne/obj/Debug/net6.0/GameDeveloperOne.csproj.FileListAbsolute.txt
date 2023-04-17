@@ -1,0 +1,15 @@
+D:\Coding Dojo\GameDeveloperOne\bin\Debug\net6.0\GameDeveloperOne.exe
+D:\Coding Dojo\GameDeveloperOne\bin\Debug\net6.0\GameDeveloperOne.deps.json
+D:\Coding Dojo\GameDeveloperOne\bin\Debug\net6.0\GameDeveloperOne.runtimeconfig.json
+D:\Coding Dojo\GameDeveloperOne\bin\Debug\net6.0\GameDeveloperOne.dll
+D:\Coding Dojo\GameDeveloperOne\bin\Debug\net6.0\GameDeveloperOne.pdb
+D:\Coding Dojo\GameDeveloperOne\obj\Debug\net6.0\GameDeveloperOne.csproj.AssemblyReference.cache
+D:\Coding Dojo\GameDeveloperOne\obj\Debug\net6.0\GameDeveloperOne.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding Dojo\GameDeveloperOne\obj\Debug\net6.0\GameDeveloperOne.AssemblyInfoInputs.cache
+D:\Coding Dojo\GameDeveloperOne\obj\Debug\net6.0\GameDeveloperOne.AssemblyInfo.cs
+D:\Coding Dojo\GameDeveloperOne\obj\Debug\net6.0\GameDeveloperOne.csproj.CoreCompileInputs.cache
+D:\Coding Dojo\GameDeveloperOne\obj\Debug\net6.0\GameDeveloperOne.dll
+D:\Coding Dojo\GameDeveloperOne\obj\Debug\net6.0\refint\GameDeveloperOne.dll
+D:\Coding Dojo\GameDeveloperOne\obj\Debug\net6.0\GameDeveloperOne.pdb
+D:\Coding Dojo\GameDeveloperOne\obj\Debug\net6.0\GameDeveloperOne.genruntimeconfig.cache
+D:\Coding Dojo\GameDeveloperOne\obj\Debug\net6.0\ref\GameDeveloperOne.dll

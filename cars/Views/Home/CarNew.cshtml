@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "New Car";
+}
+@model Car
+
+<div>
+    <h1>Add Car</h1>
+    <form asp-action="CarCreate" asp-controller="Home" method="post">
+        <div class="mb-3">
+            <label asp-for="Make"></label>
+            <input asp-for="Make" class="form-control">
+            <span asp-validation-for="Make" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Model"></label>
+            <input asp-for="Model" class="form-control">
+            <span asp-validation-for="Model" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Year"></label>
+            <input asp-for="Year" class="form-control">
+            <span asp-validation-for="Year" class="text-danger"></span>
+        </div>
+        <div>
+            <button>Add Car</button>
+        </div>
+    </form>
+</div>

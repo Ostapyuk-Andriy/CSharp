@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+@model User
+<div class="d-flex justify-content-between">
+    @await Html.PartialAsync("~/Views/Home/_Navbar.cshtml")
+</div>
+<div class="d-flex">
+
+@foreach (var i in ViewBag.AllCoupons)
+{
+    <div class="card text-center" style="width: 18rem;"> 
+        <h3>@i.Code</h3>
+        <h4>Used on: @i.Website</h4>
+        <h4>@i.Description</h4>
+        <p>@i.CouponsUsed.Count people have used this</p>
+        @if (i.CreatorId ==ViewBag.UserId)
+        {
+            <p>You Posted This</p>
+        }
+        else
+        {
+            int temp = 0;
+            @foreach (var a in i.CouponsUsed)
+            {
+                if(a.User.UserId == ViewBag.UserId)
+                {
+                    temp = a.UsedCouponId;
+                }
+            }
+            @if(temp == 0)
+            {
+                <a href="/use/@i.CouponId">Use This Coupon</a>
+            }
+            else
+            {
+            <p>You Used This Coupon</p>
+            }
+        }
+        <p>Posted by @i.Creator.UserName</p>
+    </div>
+}
+</div>

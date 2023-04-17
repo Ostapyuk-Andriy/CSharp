@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "Dish Page";
+}
+@model MyViewModel
+
+<div>
+    <div class="text-center">
+        <h3><a href="/">Chefs</a> | Dishes | <a href="/Chef/New">Add a Chef</a> | <a href="/Dish/New">Add a Dish</a></h3>
+        <h2 class="text-decoration-underline">Yum! Check out our tasty Dishes!</h2>
+    </div>
+    <div class ="text-center">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Chef</th>
+                    <th scope="col">Tastiness</th>
+                    <th scope="col">Calories</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Dish d in Model.AllDishes)
+                {
+                    <tr>
+                        <td>@d.DishName</td>
+                        <td>@d.Chef.FirstName</td>
+                        <td>@d.Tastiness</td>
+                        <td>@d.Calories</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

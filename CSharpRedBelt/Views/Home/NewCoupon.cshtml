@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "New Coupon";
+}
+@model Coupon
+<div class="d-flex justify-content-between">
+    @await Html.PartialAsync("~/Views/Home/_NavBar.cshtml")
+</div>
+<form asp-action="CreateCoupon" asp-controller="Home" method="post">
+    <div class="form-group">
+        <label asp-for="Code">Coupon Code</label><br>
+        <input type="text" asp-for="Code"><br>
+        <span class="text-danger" asp-validation-for="Code"></span><br>
+    </div>
+    <div class="form-group">
+        <label asp-for="Website">Website applicable on</label><br>
+        <input type="text" asp-for="Website"><br>
+        <span class="text-danger" asp-validation-for="Website"></span><br>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description">Description</label><br>
+        <input type="text" asp-for="Description"><br>
+        <span class="text-danger" asp-validation-for="Description"></span><br>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+</form>

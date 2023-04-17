@@ -1,0 +1,9 @@
+@{
+    int UserId = (int)Context.Session.GetInt32("uuid");
+}
+<div class="d-flex justify-content-between">
+    <h1> <a class="link-dark" href="/dashboard"> Arstagram </a></h1>
+
+    <p> <a href="/post/new">Add a Post</a>
+    <a asp-action="UserLogout" asp-controller="User" class="btn btn-danger">LogOut</a></p>
+</div>

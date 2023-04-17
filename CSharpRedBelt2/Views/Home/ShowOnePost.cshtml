@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "One User";
+}
+@{
+    int UserId = (int)Context.Session.GetInt32("uuid");
+}
+@await Html.PartialAsync("~/Views/Home/_Navbar.cshtml")
+@model Post
+<div class="d-flex justify-content-start">
+    <div>
+        <h2>@ViewBag.thisPost.Title</h2>
+        <img class="w-25" src="@ViewBag.thisPost.Image" alt="image">
+    </div>
+</div>
+    <div class="info">
+        <h3>By: @ViewBag.thisPost.Creator.UserName</h3>     
+        <h3>Medium: @ViewBag.thisPost.Medium</h3>
+        @if (ViewBag.thisPost.forSale == false)
+        {
+            <h3>Not For Sale</h3>
+        }
+        else
+        {
+            <h3>For Sale</h3>
+        }
+        <h3>@ViewBag.thisPost.LikedPosts.Count likes</h3>
+        @if (ViewBag.thisPost.CreatorId == UserId)
+        {
+            <p><a href="/post/edit/@ViewBag.thisPost.PostId">Edit</a> <a href="/delete/post/@ViewBag.thisPost.PostId">Delete</a></p>
+        }
+        else
+        {
+            <p></p>
+        }
+    </div>

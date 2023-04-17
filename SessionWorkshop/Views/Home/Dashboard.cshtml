@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="dashboard">
+    <h1>Welcome @Context.Session.GetString("userName")</h1>
+    <a class="btn btn-secondary" href="/ClearSession">Log Out</a>
+</div>
+<div class="line">
+</div>
+<h1>@Context.Session.GetInt32("userNumber")</h1>
+<div class="row gap-3 ">
+    <a class="btn btn-danger col" href="/Add">Add 1</a>
+    <a class="btn btn-success col" href="/Subtract">Minus 1</a>
+    <div class="w-100"></div>
+    <a class="btn btn-dark col" href="/Multiply">Times 2</a>
+    <a class="btn btn-warning col" href="/Random">Plus Random</a>
+</div>

@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Category Page";
+}
+@model MyViewModel
+
+<div class="text-center">
+    <h1><a href="/">Products</a> | Categories</h1>
+</div>
+<div class="d-flex justify-content-between">
+    <div>
+        <h3>New Category</h3>
+        @await Html.PartialAsync("_NewCategory", Model.Category)
+    </div>
+    <div>
+        <h3>All Categories</h3>
+        @foreach (Category c in Model.AllCategories)
+        {
+            <div>
+                <a asp-action="CategoryShowOne" asp-controller="Home" asp-route-id = "@c.CategoryId">@c.Name</a>
+            </div>
+        }
+    </div>
+</div>

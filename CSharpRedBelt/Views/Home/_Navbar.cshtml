@@ -1,0 +1,10 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+@model User
+<div class="d-flex justify-content-between">
+    <h1>Welcome!</h1>
+
+    <p> <a href="/dashboard">Home</a> | <a href="/coupon/new">Add Coupon</a> | <a href="/user/@ViewBag.UserId">AccountInfo</a> |
+    <a asp-action="UserLogout" asp-controller="User" class="btn btn-danger">LogOut</a></p>
+</div>

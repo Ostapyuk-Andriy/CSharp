@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "One User";
+}
+@model User 
+<div class="d-flex justify-content-between">
+    @await Html.PartialAsync("~/Views/Home/_Navbar.cshtml")
+</div>
+<div class="info">
+    <h2>@ViewBag.thisUser.UserName</h2>
+    <h3>Email: @ViewBag.thisUser.Email</h3>
+    <h4> # of coupons you used: @Model.CreatedCoupons.Count</h4>
+    @* <p>***************************************************</p>
+    <p>@Model.CreatedCoupons.Count</p>
+    <p>***************************************************</p> *@
+    <h4>You Posted: @ViewBag.EveryCoupon.Count</h4>
+</div>

@@ -1,0 +1,15 @@
+@model Association
+
+<form asp-action="AddProdToCat" asp-controller="Home" method="post">
+    <h3>Add Product</h3>
+    <input type="hidden" asp-for="CategoryId" value="@ViewBag.CategoryId">
+    <select asp-for="ProductId">
+        @foreach (var c in ViewBag.AllProd)
+        {
+            <option value="@c.ProductId">@c.Name</option>
+        }
+    </select>
+    <div>
+        <button type="submit">Add</button>
+    </div>
+</form>

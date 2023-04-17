@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+@model MyViewModel
+@{
+    int UserId = (int)Context.Session.GetInt32("uuid");
+}
+@await Html.PartialAsync("~/Views/Home/_Navbar.cshtml")
+<div class="d-flex">
+@foreach (var i in Model.AllPosts)
+{
+    <div class="card text-center" style="width: 18rem;"> 
+        <img class="w-150 h-50" src="@i.Image" alt="image">
+        <h3><a href="/post/@i.PostId">@i.Title</a></h3>
+        <p>By @i.Creator.UserName</p>
+        <h4>Medium: @i.Medium</h4>
+        @if (i.forSale == false)
+        {
+            <h4>Not for Sale</h4>
+        }
+        else
+        {
+            <h4>For Sale</h4>
+        }
+        <p>@i.LikedPosts.Count likes</p>
+        @if (i.CreatorId ==UserId)
+        {
+            <p><a href="/post/edit/@i.PostId">Edit</a> <a href="/delete/post/@i.PostId">Delete</a></p>
+        }
+        else
+        {
+            int temp = 0;
+            @foreach (var a in i.LikedPosts)
+            {
+                if(a.User.UserId == UserId)
+                {
+                    temp = a.LikedPostId;
+                }
+            }
+            @if(temp == 0)
+            {
+                <a href="/like/@i.PostId">Like</a>
+            }
+            else
+            {
+            <p><a href="/unlike/@temp">Unlike</a></p>
+            }
+        }
+    </div>
+}
+</div>

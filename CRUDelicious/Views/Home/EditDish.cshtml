@@ -1,0 +1,48 @@
+@{
+    ViewData["Title"] = "Edit Dish";
+}
+@model Dish
+
+<div class="text-center">
+    <h1>Edit @Model.DishName</h1>
+    <div>
+        <p><a href="/">Home</a> | <a asp-action="DishNew" asp-controller="Home">Add a Dish</a></p>
+    </div>
+<div class="text-center">
+    <form asp-action="UpdateDish" asp-controller="Home" asp-route-DishId="@Model.DishId" method="post">
+        <div class="mb-3">
+            <label asp-for="ChefName"></label>
+            <input asp-for="ChefName" class="form-control">
+            <span asp-validation-for="ChefName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DishName"></label>
+            <input asp-for="DishName" class="form-control">
+            <span asp-validation-for="DishName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Calories"></label>
+            <input asp-for="Calories" class="form-control">
+            <span asp-validation-for="Calories" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Tastiness"></label>
+            <select asp-for="Tastiness" name="Tastiness">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <span asp-validation-for="Tastiness" class="text-danger"></span>
+        </div>
+                <div class="mb-3">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div>
+            <button>Edit a Dish</button>
+        </div>
+    </form>
+</div>

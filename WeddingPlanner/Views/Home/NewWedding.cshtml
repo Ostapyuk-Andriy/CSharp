@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "New Wedding";
+}
+@model Wedding
+<div class="d-flex justify-content-between">
+    <h1>Welcome!</h1>
+    <p><a href="/dashboard">Home</a>| Plan a Wedding |
+    <a asp-action="UserLogout" asp-controller="User" class="btn btn-danger">LogOut</a></p>
+</div>
+<form asp-action="CreateWedding" asp-controller="Home" method="post">
+    <div class="form-group">
+        <label asp-for="WedderOne">Bride</label><br>
+        <input type="text" asp-for="WedderOne"><br>
+        <span class="text-danger" asp-validation-for="WedderOne"></span><br>
+    </div>
+    <div class="form-group">
+        <label asp-for="WedderTwo">Groom</label><br>
+        <input type="text" asp-for="WedderTwo"><br>
+        <span class="text-danger" asp-validation-for="WedderTwo"></span><br>
+    </div>
+    <div class="form-group">
+        <label asp-for="WeddDate">Date</label><br>
+        <input type="date" asp-for="WeddDate" id="weddDate"><br>
+        <span class="text-danger" asp-validation-for="WeddDate"></span><br>
+    </div>
+    <div class="form-group">
+        <label asp-for="WeddAddress">Address</label><br>
+        <input type="text" asp-for="WeddAddress"><br>
+        <span class="text-danger" asp-validation-for="WeddAddress"></span><br>
+    </div></br>
+    <div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+</form>

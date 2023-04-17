@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="d-flex justify-content-between">
+    <h1>Welcome!</h1>
+    <p>Home | <a href="/wedding/new">Plan a Wedding</a> |
+    <a asp-action="UserLogout" asp-controller="User" class="btn btn-danger">LogOut</a></p>
+</div>
+<table class="table"> 
+    <thead>
+        <th scope="col">Wedding of</th>
+        <th scope="col">Date</th>
+        <th scope="col">Guest Count</th>
+        <th scope="col">Action</th>
+    </thead>
+    <tbody>
+        @foreach (var i in ViewBag.AllWeddings)
+        {
+            <tr>
+                <td><a href="/wedding/@i.WeddingId">@i.WedderOne & @i.WedderTwo</a></td>
+                <td>@i.WeddDate.ToString("MMM d, yyyy")</td>
+                <td>@i.WeddingAttendees.Count</td>
+                @if (i.PlannerId ==ViewBag.UserId)
+                {
+                    <td><a href="/delete/wedding/@i.WeddingId">Delete</a></td>
+                }
+                else
+                {
+                    int temp = 0;
+                    @foreach (var a in i.WeddingAttendees)
+                    {
+                        if(a.User.UserId == ViewBag.UserId)
+                        {
+                            temp = a.AttendanceId;
+                        }
+                    }
+                    @if(temp == 0)
+                    {
+                        <td><a href="/rsvp/@i.WeddingId">RSVP</a></td>
+                    }
+                    else
+                    {
+                        <td><a href="/unrsvp/@temp">Un-RSVP</a></td>
+                    }
+                }
+            </tr>
+        }
+    </tbody>
+</table>
